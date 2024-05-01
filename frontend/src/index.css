@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.toggle-btn{
+	background-color: #b7b9ba;
+	border: 1px solid #aaa;
+	border-radius: 99px;
+	width: 50px;
+	height: 28px;
+	transition: background-color 0.1s ease, border-color 0.2s ease;
+	cursor: pointer;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.748);
+	position:relative;
+	/* display: inline-flex; */
+}
+
+.toggle-btn .thumb{
+	height: 20px;
+	width: 20px;
+	background-color: #fff;
+	border-radius: 99px;
+	transform: translateX(0);
+	transition: left 0.15s ease;
+	position: absolute;
+	left: 3px;
+	top:50%;
+	transform: translateY(-50%);
+}
+.toggle-btn.toggled{
+	background-color: #15b58e;
+}
+
+.toggled-btn:hover{
+	border-color: #6f6f6f;
+
+}
+
+.toggle-btn.toggled .thumb{
+	left: calc(100% - 50%);
+
+}
+body {
+	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+/* dark mode looking scrollbar */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: #555;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #121212;
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #242424;
+}
+
+/* SHAKE ANIMATION ON HORIZONTAL DIRECTION */
+.shake {
+	animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) 0.2s both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+
+@keyframes shake {
+	10%,
+	90% {
+		transform: translate3d(-1px, 0, 0);
+	}
+
+	20%,
+	80% {
+		transform: translate3d(2px, 0, 0);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: translate3d(-4px, 0, 0);
+	}
+
+	40%,
+	60% {
+		transform: translate3d(4px, 0, 0);
+	}
+}
