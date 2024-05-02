@@ -249,9 +249,9 @@ response{
 
 ```bash
 
-MONGO_DB_URI=mongodb+srv://dg24:dgarg24@cluster0.r7c0930.mongodb.net/ChatOrbit?retryWrites=true&w=majority
+MONGO_DB_URI="mongodb+srv://dg24:hqassignment@cluster0.vec8iy3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
-JWT_SECRET=u88ND7h4/ziuoZWrlrID3rKRBo7T8pjO/nTSXYnSkLw=
+JWT_SECRET=a78ND7h4/ziuoZWrlrID3rKRBo7T8pjO/nTSXYnSkLw=
 
 NODE_ENV=development
 
