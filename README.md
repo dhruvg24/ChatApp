@@ -1,15 +1,37 @@
+# ChatApp
+A website to have real-time communication.
+## POSTMAN API Collection
+ hq_collection.json
+## Setup and Run Instructions:
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-# Chat APP HQ
+```json
+    git clone https://github.com/dhruvg24/ChatApp.git
+    cd ChatApp
 
-description
+```
+1. create .env file same as given at the last of README file.
+2. Run the following commands to start the server.
 
-## setup and run instructions.
+For frontend:
+```json
+    cd frontend
+    npm i
+    npm run dev
+```
+
+For backend:
+```json
+    cd backend
+    npm i
+    nodemon server.js
+```
 
 ## API Endpoints
 
 ### /api/v1/auth
 
-#### 1. `<b>`[POST] /signup `</b>`
+#### 1. [POST] /signup 
 
 ```json
 
@@ -17,15 +39,15 @@ description
 
     {
 
-"fullName":"Namita Jain",
+        "fullName":"Namita Jain",
 
-"username": "njain",
+        "username": "njain",
 
-"password": "abcd@1234",
+        "password": "abcd@1234",
 
-"confirmPassword": "abcd@1234",
+        "confirmPassword": "abcd@1234",
 
-"gender": "female"
+        "gender": "female"
 
     }
 
@@ -34,20 +56,20 @@ description
     {
 
 
-"_id": "663268b835fedb1239c4f7dc",
+        "_id": "663268b835fedb1239c4f7dc",
 
-"fullName": "abcd efgh",
+        "fullName": "abcd efgh",
 
-"username": "abcde",
+        "username": "abcde",
 
-"profilePic": "https://avatar.iran.liara.run/public/boy?username=abcde"
+        "profilePic": "https://avatar.iran.liara.run/public/boy?username=abcde"
 
     }
 
 
 ```
 
-#### 2. `<b>`[POST] /login`</b>`
+#### 2. [POST] /login
 
 ```json
 
@@ -55,9 +77,9 @@ description
 
     {
 
-"username": "abcde",
+        "username": "abcde",
 
-"password": "abcde@12345",
+        "password": "abcde@12345",
 
     }
 
@@ -66,20 +88,20 @@ description
     {
 
 
-"_id": "663268b835fedb1239c4f7dc",
+        "_id": "663268b835fedb1239c4f7dc",
 
-"fullName": "abcd efgh",
+        "fullName": "abcd efgh",
 
-"username": "abcde",
+        "username": "abcde",
 
-"profilePic": "https://avatar.iran.liara.run/public/boy?username=abcde"
+        "profilePic": "https://avatar.iran.liara.run/public/boy?username=abcde"
 
     }
 
 
 ```
 
-#### 3. `<b>`[POST] /logout
+#### 3. [POST] /logout
 
 ```json
 
@@ -87,7 +109,7 @@ description
 
     {
 
-"message": "Logged out successfully"
+        "message": "Logged out successfully"
 
     }
 
@@ -95,7 +117,7 @@ description
 
 ### /api/v1/messages
 
-#### 1. `<b>`[POST] /send/:id
+#### 1. [POST] /send/:id
 
 ```json
 
@@ -104,7 +126,7 @@ description
 
     {
 
-"message":"Hello dear XYZ!"
+        "message":"Hello dear XYZ!"
 
     }
 
@@ -112,19 +134,19 @@ description
 
     {
 
-"senderId": "663268b835fedb1239c4f7dc",
+        "senderId": "663268b835fedb1239c4f7dc",
 
-"receiverId": "6632693535fedb1239c4f7e2",
+        "receiverId": "6632693535fedb1239c4f7e2",
 
-"message": "Hello dear XYQ!",
+        "message": "Hello dear XYQ!",
 
-"_id": "66326c0d35fedb1239c4f7f0",
+        "_id": "66326c0d35fedb1239c4f7f0",
 
-"createdAt": "2024-05-01T16:21:33.572Z",
+        "createdAt": "2024-05-01T16:21:33.572Z",
 
-"updatedAt": "2024-05-01T16:21:33.572Z",
+        "updatedAt": "2024-05-01T16:21:33.572Z",
 
-"__v": 0
+        "__v": 0
 
     }
 
@@ -132,7 +154,7 @@ description
 
 ```
 
-#### 2. `<b>`[GET] /:id
+#### 2. [GET] /:id
 
 ```json
 
@@ -145,19 +167,19 @@ description
 
             {
 
-"_id": "66326c0d35fedb1239c4f7f0",
+                "_id": "66326c0d35fedb1239c4f7f0",
 
-"senderId": "663268b835fedb1239c4f7dc",
+                "senderId": "663268b835fedb1239c4f7dc",
 
-"receiverId": "6632693535fedb1239c4f7e2",
+                "receiverId": "6632693535fedb1239c4f7e2",
 
-"message": "Hello dear XYQ!",
+                "message": "Hello dear XYQ!",
 
-"createdAt": "2024-05-01T16:21:33.572Z",
+                "createdAt": "2024-05-01T16:21:33.572Z",
 
-"updatedAt": "2024-05-01T16:21:33.572Z",
+                "updatedAt": "2024-05-01T16:21:33.572Z",
 
-"__v": 0
+                "__v": 0
 
             }
 
@@ -179,41 +201,41 @@ response{
 
                 {
 
-"_id": "65e38f292508ed44773dc49c",
+                    "_id": "65e38f292508ed44773dc49c",
 
-"fullName": "Namita Jain",
+                    "fullName": "Namita Jain",
 
-"username": "njain",
+                    "username": "njain",
 
-"gender": "female",
+                    "gender": "female",
 
-"profilePic": "https://avatar.iran.liara.run/public/girl?username=njain",
+                    "profilePic": "https://avatar.iran.liara.run/public/girl?username=njain",
 
-"createdAt": "2024-03-02T20:42:17.165Z",
+                    "createdAt": "2024-03-02T20:42:17.165Z",
 
-"updatedAt": "2024-03-02T20:42:17.165Z",
+                    "updatedAt": "2024-03-02T20:42:17.165Z",
 
-"__v": 0
+                    "__v": 0
 
                 },
 
                 {
 
-"_id": "65e38f4f2508ed44773dc4a7",
+                    "_id": "65e38f4f2508ed44773dc4a7",
 
-"fullName": "Anupam Sharma",
+                    "fullName": "Anupam Sharma",
 
-"username": "asharma",
+                    "username": "asharma",
 
-"gender": "male",
+                    "gender": "male",
 
-"profilePic": "https://avatar.iran.liara.run/public/boy?username=asharma",
+                    "profilePic": "https://avatar.iran.liara.run/public/boy?username=asharma",
 
-"createdAt": "2024-03-02T20:42:55.753Z",
+                    "createdAt": "2024-03-02T20:42:55.753Z",
 
-"updatedAt": "2024-03-02T20:42:55.753Z",
+                    "updatedAt": "2024-03-02T20:42:55.753Z",
 
-"__v": 0
+                    "__v": 0
 
                 },
 
@@ -231,7 +253,7 @@ response{
 
     {
 
-"status":"busy"
+        "status":"busy"
 
     }
 
@@ -239,7 +261,7 @@ response{
 
     {
 
-"message":"Status Changed"
+        "message":"Status Changed"
 
     }
 
@@ -249,12 +271,9 @@ response{
 
 ```bash
 
-MONGO_DB_URI="mongodb+srv://dg24:hqassignment@cluster0.vec8iy3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-
-JWT_SECRET=a78ND7h4/ziuoZWrlrID3rKRBo7T8pjO/nTSXYnSkLw=
-
-NODE_ENV=development
-
-PORT=8000
+    MONGO_DB_URI=...
+    JWT_SECRET=...
+    NODE_ENV=development
+    PORT=8000
 
 ```
